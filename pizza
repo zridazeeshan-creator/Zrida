@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>pizza</title>
+    </head>
+    <body>
+        <h1>pizza</h1>
+        <p>pizza is a delicious food</p>
+        <img src="images.jpeg" alt="pizza image">
+        </body>
+        </html>

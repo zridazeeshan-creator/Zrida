@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title> Cuisines </title>
+    </head>
+    <body>
+        <h1><b>Pizza</b></h1>
+        <p style="color:blue"> A personal-sized 8 to 10-inch pie, perfect for a single diner
+        <h1><b>Burger</b></h1>
+        <p style="color:rgb(111, 255, 0)"> A personal-sized 8 to 10-inch pie, perfect for a single diner
+        <h1><b>Biryani</b></h1>
+        <p style="color:rgb(255, 0, 0)"> A personal-sized 8 to 10-inch pie, perfect for a single diner
+    </body>
+</html>

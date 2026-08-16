@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Cuisines</title>
+        <style>
+            div {
+                
+                
+                background-color: lightblue;
+                margin: 10px;
+                padding: 10px;
+            }
+            .sticky {
+                position: sticky;
+                
+            }
+            .fixed {
+                position: fixed;
+            
+            }
+            .relative {
+                position: relative;
+            }
+            .absolute {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cuisines</h1>
+        <h2>burger</h2>
+        <div>Burger is very famous dish in the world</div>
+        <h3>pizza</h3>
+        <div class="sticky">Pizza is a popular dish worldwide</div>
+         <h4>pasta</h4>
+        <div class="fixed">Pasta is a traditional Italian dish</div>
+        
+        
+        <h5>salad</h5>
+        <div class="relative">Salad is a healthy dish
+            <div class="absolute">
+                Salad can be made with various ingredients
+                </div>
+               
+            
+
+                
+        
+        <div style="height: 1600px;" ></div>
+    </body>
+</html>

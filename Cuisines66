@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title> Cuisines</title>
+</head>
+<body>
+    <h1>
+         Best Cuisines
+    </h1>
+        <h2>
+            Burger
+        </h2>
+        <p><i>A delicious burger made with fresh ingredients.</i></p>
+        <img src="images (27).jpeg" alt="Burger" width="500" height="600">
+       <h3>
+            Pizza
+        </h3>
+        <p><i>A classic pizza with a variety of toppings.</i></p>
+        <img src="images (5).jpeg" alt="Pizza" width="500" height="600">
+        <h4>
+            Pasta
+        </h4>
+        <p><i>A flavorful pasta dish with rich sauce.</i></p>
+        <img src="images (6).jpeg" alt="Pasta" width="500" height="600">
+</body>
+</html>

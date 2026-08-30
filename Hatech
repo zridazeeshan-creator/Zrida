@@ -1,9 +1,30 @@
 <html>
     <head>
-        <title>Hateck</title>
-        </head>
-        <body>
-            <h1>Hateck</h1>
-            <p>Welcome to Hateck Website!</p>
-            <img src="d:\DONT TOUCH\Downloads\hA.jpeg" alt="Hateck Logo" width="200">
-        </body>
+        <title>text-align: center; color: Black; Hateck</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: black;
+                text-decoration: underline;
+            }
+            title {
+                text-align: center;
+               
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hateck</h1>
+        <p><b><i>Welcome to Hateck Website!</i></b></p>
+        <img src="images (5).png" alt="Hateck Logo" width="450" height="300">
+        <a href="https://www.hatech.pk/shop">Visit Our Website</a>
+        <footer>
+            Contact: 03338233007
+        </footer>
+    </body>
+</html>

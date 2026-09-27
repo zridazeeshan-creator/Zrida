@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HT Enova | Premium Tech Store</title>
+
+    <meta name="description"
+        content="HT Enova - Your destination for mobiles, smartphones, accessories, audio, smart watches and modern technology.">
+
+    <style>
+        /* =========================================================
+           HT ENOVA
+           Premium Technology Store
+           ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f8fc;
+            color: #101828;
+            line-height: 1.6;
+        }
+
+        button,
+        input,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        :root {
+            --primary: #635bff;
+            --primary-dark: #4f46e5;
+            --secondary: #00b8d9;
+            --dark: #101828;
+            --dark-2: #1d2939;
+            --gray: #667085;
+            --light-gray: #f2f4f7;
+            --border: #e4e7ec;
+            --white: #ffffff;
+            --green: #12b76a;
+            --orange: #f79009;
+            --red: #f04438;
+            --shadow: 0 15px 45px rgba(16, 24, 40, 0.10);
+            --radius: 20px;
+        }
+
+        .container {
+            width: min(1200px, 92%);
+            margin: auto;
+        }
+
+        /* =========================================================
+           TOP BAR
+           ========================================================= */
+
+        .top-bar {
+            background: var(--dark);
+            color: #d0d5dd;
+            font-size: 13px;
+            padding: 9px 0;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =========================================================
+           NAVBAR
+           ========================================================= */
+
+        .navbar {
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+
+        .logo-icon {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            color: white;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+            box-shadow: 0 10px 25px rgba(99,91,255,0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                100deg,
+                var(--primary),
+                var(--secondary)
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            font-weight: 600;
+            color: #475467;
+        }
+
+        .nav-links a {
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 9px;
+            align-items: center;
+        }
+
+        .icon-button {
+            width: 43px;
+            height: 43px;
+            border-radius: 13px;
+            background: white;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .icon-button:hover {
+            background: #f5f3ff;
+            color: var(--primary);
+        }
+
+        .cart-count,
+        .wishlist-count {
+            position: absolute;
+            top: -6px;
+            right: -5px;
+            min-width: 18px;
+            height: 18px;
+            display: grid;
+            place-items: center;
+            padding: 2px 5px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            padding: 75px 0 45px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #eeecff;
+            color: #5146d8;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 0.99;
+            letter-spacing: -4px;
+            max-width: 700px;
+        }
+
+        .hero-description {
+            color: var(--gray);
+            font-size: 18px;
+            max-width: 590px;
+            margin: 25px 0 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            border: none;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-weight: 800;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background: var(--dark);
+            color: white;
+            box-shadow: 0 12px 25px rgba(16,24,40,0.17);
+        }
+
+        .button-secondary {
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--dark);
+        }
+
+        .hero-visual {
+            min-height: 500px;
+            border-radius: 35px;
+            background:
+                radial-gradient(
+                    circle at 25% 20%,
+                    #b7f4ff,
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ded9ff,
+                    #ecfcff
+                );
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: grid;
+            place-items: center;
+        }
+
+        .phone {
+            width: 245px;
+            height: 450px;
+            border: 9px solid #111827;
+            border-radius: 42px;
+            background:
+                radial-gradient(
+                    circle at 30% 20%,
+                    #55d9ff,
+                    transparent 25%
+                ),
+                linear-gradient(
+                    145deg,
+                    #111936,
+                    #514cff,
+                    #08c8dc
+                );
+            box-shadow: 0 40px 60px rgba(16,24,40,0.32);
+            transform: rotate(7deg);
+            position: relative;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 24px;
+            background: #111827;
+            border-radius: 20px;
+        }
+
+        .phone-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 85px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 4px;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 15px 18px;
+            border-radius: 17px;
+            box-shadow: var(--shadow);
+            font-weight: 800;
+        }
+
+        .floating-card.one {
+            left: 30px;
+            top: 60px;
+        }
+
+        .floating-card.two {
+            right: 25px;
+            bottom: 65px;
+        }
+
+        /* =========================================================
+           TRUST FEATURES
+           ========================================================= */
+
+        .trust-section {
+            padding: 20px 0 60px;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .trust-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 19px;
+            display: flex;
+            gap: 13px;
+            align-items: center;
+        }
+
+        .trust-icon {
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            background: #f2f4f7;
+            border-radius: 13px;
+            font-size: 20px;
+        }
+
+        .trust-card strong {
+            display: block;
+        }
+
+        .trust-card span {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           SECTION
+           ========================================================= */
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-size: 38px;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            margin-top: 8px;
+        }
+
+        .view-all {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* =========================================================
+           CATEGORIES
+           ========================================================= */
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .category-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-align: center;
+            padding: 25px 10px;
+            transition: 0.25s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .category-icon {
+            width: 65px;
+            height: 65px;
+            margin: auto auto 12px;
+            display: grid;
+            place-items: center;
+            background: #f2f4f7;
+            border-radius: 18px;
+            font-size: 30px;
+        }
+
+        .category-card h3 {
+            font-size: 15px;
+        }
+
+        .category-card p {
+            color: var(--gray);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           SHOP TOOLBAR
+           ========================================================= */
+
+        .shop-toolbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            margin-bottom: 25px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            border: 1px solid var(--border);
+            background: white;
+            padding: 9px 13px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .filter-button.active,
+        .filter-button:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .sort-select {
+            border: 1px solid var(--border);
+            padding: 9px 12px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        /* =========================================================
+           PRODUCTS
+           ========================================================= */
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            overflow: hidden;
+            transition: 0.25s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-image {
+            height: 245px;
+            display: grid;
+            place-items: center;
+            background:
+                linear-gradient(
+                    145deg,
+                    #f4f5fa,
+                    #e6e9ff
+                );
+            position: relative;
+        }
+
+        .product-emoji {
+            font-size: 90px;
+            filter: drop-shadow(
+                0 20px 15px rgba(16,24,40,0.17)
+            );
+        }
+
+        .product-badge {
+            position: absolute;
+            left: 13px;
+            top: 13px;
+            background: var(--dark);
+            color: white;
+            border-radius: 50px;
+            padding: 5px 10px;
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+        .wishlist-button {
+            position: absolute;
+            right: 13px;
+            top: 13px;
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .wishlist-button.liked {
+            color: var(--red);
+        }
+
+        .product-content {
+            padding: 17px;
+        }
+
+        .rating {
+            color: var(--orange);
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .product-content h3 {
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .product-type {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .price {
+            margin: 13px 0;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .old-price {
+            font-size: 12px;
+            color: var(--gray);
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        .add-cart {
+            width: 100%;
+            border: none;
+            background: #f2f4f7;
+            padding: 11px;
+            border-radius: 12px;
+            font-weight: 800;
+        }
+
+        .add-cart:hover {
+            background: #e9e7ff;
+            color: var(--primary);
+        }
+
+        /* =========================================================
+           BIG DEAL
+           ========================================================= */
+
+        .deal-banner {
+            margin: 30px 0;
+            border-radius: 30px;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 90% 10%,
+                    #625cff,
+                    transparent 25%
+                ),
+                linear-gradient(
+                    110deg,
+                    #101828,
+                    #243b78
+                );
+            color: white;
+            padding: 55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .deal-label {
+            color: #9defff;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .deal-banner h2 {
+            font-size: 43px;
+            line-height: 1.1;
+            margin: 10px 0;
+        }
+
+        .deal-banner p {
+            color: #d0d5dd;
+        }
+
+        .deal-timer {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .timer-box {
+            min-width: 60px;
+            padding: 9px;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+        }
+
+        .timer-box strong {
+            display: block;
+            font-size: 20px;
+        }
+
+        .timer-box span {
+            font-size: 10px;
+            color: #cbd5e1;
+        }
+
+        /* =========================================================
+           BRANDS
+           ========================================================= */
+
+        .brands {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .brand {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            font-weight: 900;
+            color: #475467;
+        }
+
+        /* =========================================================
+           WHY US
+           ========================================================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .why-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 23px;
+            padding: 30px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: var(--gray);
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+            margin-top: 22px;
+        }
+
+        .benefit {
+            padding: 15px;
+            background: #f8f9fc;
+            border-radius: 14px;
+        }
+
+        /* =========================================================
+           TESTIMONIALS
+           ========================================================= */
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .testimonial {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 21px;
+            padding: 25px;
+        }
+
+        .testimonial-stars {
+            color: var(--orange);
+            margin-bottom: 12px;
+        }
+
+        .testimonial p {
+            color: #475467;
+            margin-bottom: 18px;
+        }
+
+        .customer {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .customer-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+        }
+
+        .customer small {
+            color: var(--gray);
+        }
+
+        /* =========================================================
+           FAQ
+           ========================================================= */
+
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            border: none;
+            background: white;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            font-weight: 800;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 18px 18px;
+            color: var(--gray);
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* =========================================================
+           NEWSLETTER
+           ========================================================= */
+
+        .newsletter {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .newsletter h2 {
+            font-size: 32px;
+        }
+
+        .newsletter p {
+            color: var(--gray);
+            margin: 8px 0 22px;
+        }
+
+        .newsletter-form {
+            max-width: 550px;
+            display: flex;
+            gap: 8px;
+            margin: auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            padding: 13px;
+            outline: none;
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background: var(--dark);
+            color: #d0d5dd;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        footer h3,
+        footer h4 {
+            color: white;
+            margin-bottom: 13px;
+        }
+
+        footer p,
+        footer a {
+            color: #98a2b3;
+            font-size: 14px;
+            margin: 7px 0;
+            display: block;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #344054;
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            color: #98a2b3;
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           SEARCH MODAL
+           ========================================================= */
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(16,24,40,0.62);
+            backdrop-filter: blur(7px);
+            z-index: 2000;
+            display: none;
+            padding: 90px 20px;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .search-box {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            border-radius: 22px;
+            padding: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 22px;
+            padding: 12px;
+        }
+
+        .search-results {
+            margin-top: 10px;
+        }
+
+        .search-result {
+            padding: 14px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* =========================================================
+           CART SIDEBAR
+           ========================================================= */
+
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -440px;
+            width: min(440px,100%);
+            height: 100vh;
+            background: white;
+            z-index: 3000;
+            box-shadow: -20px 0 60px rgba(16,24,40,0.18);
+            padding: 25px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 12px;
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cart-product-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 13px;
+            background: #f2f4f7;
+            display: grid;
+            place-items: center;
+            font-size: 30px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-info small {
+            color: var(--gray);
+        }
+
+        .cart-remove {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 9px;
+            background: #fef3f2;
+            color: var(--red);
+        }
+
+        .cart-total {
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+        }
+
+        .total-line {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================================================
+           PRODUCT MODAL
+           ========================================================= */
+
+        .product-modal {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+        }
+
+        .product-modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .modal-image {
+            min-height: 350px;
+            display: grid;
+            place-items: center;
+            border-radius: 20px;
+            background: #f2f4f7;
+            font-size: 130px;
+        }
+
+        .modal-price {
+            font-size: 30px;
+            font-weight: 900;
+            margin: 15px 0;
+        }
+
+        .modal-close {
+            float: right;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1050px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .brands {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 850px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: 430px;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .deal-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .top-bar-content {
+                justify-content: center;
+            }
+
+            .top-bar-content span:last-child {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 45px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2.5px;
+            }
+
+            .phone {
+                width: 185px;
+                height: 340px;
+            }
+
+            .hero-visual {
+                min-height: 350px;
+            }
+
+            .floating-card {
+                font-size: 12px;
+                padding: 11px;
+            }
+
+            .floating-card.one {
+                left: 12px;
+            }
+
+            .floating-card.two {
+                right: 12px;
+            }
+
+            .trust-grid,
+            .categories-grid,
+            .products-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .section-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .shop-toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .deal-banner {
+                padding: 30px;
+            }
+
+            .deal-banner h2 {
+                font-size: 31px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-modal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         TOP BAR
+         ========================================================= -->
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span>⚡ Free delivery on orders over Rs. 5,000</span>
+            <span>🔒 Secure Payments &nbsp; • &nbsp; ↩ Easy Returns &nbsp; • &nbsp; ✓ Genuine Products</span>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">H</span>
+                HT <span class="gradient-text">Enova</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#shop">Shop</a>
+                <a href="#deals">Deals</a>
+                <a href="#brands">Brands</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-button"
+                    onclick="openSearch()"
+                    title="Search">
+                    🔍
+                </button>
+
+                <button
+                    class="icon-button"
+                    onclick="showWishlist()"
+                    title="Wishlist">
+                    ♡
+                    <span class="wishlist-count" id="wishlistCount">0</span>
+                </button>
+
+                <button
+                    class="icon-button"
+                    onclick="openCart()"
+                    title="Shopping Cart">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <button
+                    class="icon-button mobile-menu"
+                    onclick="alert('Use the navigation links below to browse HT Enova.')">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <div class="hero-badge">
+                        ✦ NEW SEASON TECH COLLECTION
+                    </div>
+
+                    <h1>
+                        Upgrade your
+                        <span class="gradient-text">
+                            digital life.
+                        </span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover premium smartphones, powerful accessories,
+                        wireless audio, smart watches and everyday tech
+                        essentials — all at HT Enova.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#shop"
+                            class="button button-primary">
+                            Shop Now →
+                        </a>
+
+                        <a
+                            href="#categories"
+                            class="button button-secondary">
+                            Explore Categories
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="floating-card one">
+                        📱 Latest Smartphones
+                    </div>
+
+                    <div class="phone">
+
+                        <div class="phone-notch"></div>
+
+                        <div class="phone-text">
+                            HT ENOVA
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card two">
+                        ⚡ Fast & Secure Delivery
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TRUST
+             ===================================================== -->
+
+        <section class="trust-section">
+
+            <div class="container trust-grid">
+
+                <div class="trust-card">
+                    <div class="trust-icon">🚚</div>
+                    <div>
+                        <strong>Fast Delivery</strong>
+                        <span>Across Pakistan</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">🛡️</div>
+                    <div>
+                        <strong>100% Genuine</strong>
+                        <span>Quality checked</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">↩️</div>
+                    <div>
+                        <strong>Easy Returns</strong>
+                        <span>Simple process</span>
+                    </div>
+                </div>
+
+                <div class="trust-card">
+                    <div class="trust-icon">🔒</div>
+                    <div>
+                        <strong>Secure Checkout</strong>
+                        <span>Protected payments</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATEGORIES
+             ===================================================== -->
+
+        <section class="section" id="categories">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2 class="section-title">
+                            Shop by Category
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Everything you need for your connected lifestyle.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="categories-grid">
+
+                    <a
+                        href="#shop"
+                        class="category-card"
+                        onclick="filterProducts('Mobile')">
+
+                        <div class="category-icon">📱</div>
+
+                        <h3>Mobiles</h3>
+
+                        <p>Smartphones</p>
+
+                    </a>
+
+
+                    <a
+                        href="#shop"
+                        class="category-card"
+                        onclick="filterProducts('Audio')">
+
+                        <div class="category-icon">🎧</div>
+
+                        <h3>Audio</h3>
+
+                        <p>Earbuds & Headsets</p>
+
+                    </a>
+
+
+                    <a
+                        href="#shop"
+                        class="category-card"
+                        onclick="filterProducts('Charger')">
+
+                        <div class="category-icon">🔌</div>
+
+                        <h3>Power</h3>
+
+                        <p>Chargers & Cables</p>
+
+                    </a>
+
+
+                    <a
+                        href="#shop"
+                        class="category-card"
+                        onclick="filterProducts('Wearable')">
+
+                        <div class="category-icon">⌚</div>
+
+                        <h3>Wearables</h3>
+
+                        <p>Smart Watches</p>
+
+                    </a>
+
+
+                    <a
+                        href="#shop"
+                        class="category-card"
+                        onclick="filterProducts('Protection')">
+
+                        <div class="category-icon">🛡️</div>
+
+                        <h3>Protection</h3>
+
+                        <p>Cases & Guards</p>
+
+                    </a>
+
+
+                    <a
+                        href="#shop"
+                        class="category-card">
+
+                        <div class="category-icon">💻</div>
+
+                        <h3>Gadgets</h3>
+
+                        <p>Smart Tech</p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SHOP
+             ===================================================== -->
+
+        <section class="section" id="shop">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2 class="section-title">
+                            Featured Products
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Hand-picked tech products for you.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="shop-toolbar">
+
+                    <div class="filter-buttons">
+
+                        <button
+                            class="filter-button active"
+                            onclick="filterProducts('All')">
+                            All
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            onclick="filterProducts('Mobile')">
+                            Mobiles
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            onclick="filterProducts('Audio')">
+                            Audio
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            onclick="filterProducts('Charger')">
+                            Chargers
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            onclick="filterProducts('Wearable')">
+                            Wearables
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            onclick="filterProducts('Protection')">
+                            Accessories
+                        </button>
+
+                    </div>
+
+
+                    <select
+                        class="sort-select"
+                        onchange="sortProducts(this.value)">
+
+                        <option value="default">
+                            Sort Products
+                        </option>
+
+                        <option value="low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="rating">
+                            Highest Rated
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    class="products-grid"
+                    id="productsGrid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DEAL
+             ===================================================== -->
+
+        <section class="container" id="deals">
+
+            <div class="deal-banner">
+
+                <div>
+
+                    <div class="deal-label">
+                        LIMITED TIME OFFER
+                    </div>
+
+                    <h2>
+                        Mega Tech Sale
+                    </h2>
+
+                    <p>
+                        Save up to 30% on selected products.
+                    </p>
+
+                    <div class="deal-timer">
+
+                        <div class="timer-box">
+                            <strong id="days">02</strong>
+                            <span>DAYS</span>
+                        </div>
+
+                        <div class="timer-box">
+                            <strong id="hours">12</strong>
+                            <span>HOURS</span>
+                        </div>
+
+                        <div class="timer-box">
+                            <strong id="minutes">45</strong>
+                            <span>MIN</span>
+                        </div>
+
+                        <div class="timer-box">
+                            <strong id="seconds">30</strong>
+                            <span>SEC</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#shop"
+                    class="button"
+                    style="background:white;color:#101828">
+                    Shop Deals →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BRANDS
+             ===================================================== -->
+
+        <section class="section" id="brands">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2 class="section-title">
+                            Popular Brands
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Explore technology from brands people love.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="brands">
+
+                    <div class="brand">APPLE</div>
+                    <div class="brand">SAMSUNG</div>
+                    <div class="brand">XIAOMI</div>
+                    <div class="brand">OPPO</div>
+                    <div class="brand">VIVO</div>
+                    <div class="brand">ANKER</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHY HT ENOVA
+             ===================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="why-grid">
+
+                    <div class="why-card">
+
+                        <h2 class="section-title">
+                            Why choose
+                            <span class="gradient-text">
+                                HT Enova?
+                            </span>
+                        </h2>
+
+                        <p>
+                            We make buying technology simple, transparent
+                            and enjoyable. From your first click to delivery,
+                            we're focused on giving you a better shopping
+                            experience.
+                        </p>
+
+                        <div class="benefits">
+
+                            <div class="benefit">
+                                ✓ Genuine Products
+                            </div>
+
+                            <div class="benefit">
+                                ✓ Competitive Prices
+                            </div>
+
+                            <div class="benefit">
+                                ✓ Fast Delivery
+                            </div>
+
+                            <div class="benefit">
+                                ✓ Friendly Support
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <h3>
+                            Need help choosing?
+                        </h3>
+
+                        <p>
+                            Not sure which phone, charger or accessory is
+                            right for you? Our support team can help you
+                            compare products and find the right option.
+                        </p>
+
+                        <br>
+
+                        <a
+                            href="#contact"
+                            class="button button-primary">
+                            Talk to HT Enova →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TESTIMONIALS
+             ===================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2 class="section-title">
+                            What Customers Say
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Realistic sample reviews for the store design.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="testimonials">
+
+                    <div class="testimonial">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "The website was really easy to use and my order
+                            arrived quickly. The phone accessories were
+                            exactly what I needed."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="customer-avatar">
+                                A
+                            </div>
+
+                            <div>
+                                <strong>Ahmed</strong>
+                                <small>Verified Customer</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="testimonial">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Great selection of tech products. I especially
+                            liked how easy it was to compare different
+                            accessories."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="customer-avatar">
+                                S
+                            </div>
+
+                            <div>
+                                <strong>Sarah</strong>
+                                <small>Verified Customer</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="testimonial">
+
+                        <div class="testimonial-stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Clean design, good prices and a very smooth
+                            shopping experience."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="customer-avatar">
+                                H
+                            </div>
+
+                            <div>
+                                <strong>Hamza</strong>
+                                <small>Verified Customer</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+             ===================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2 class="section-title">
+                            Frequently Asked Questions
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Quick answers about shopping at HT Enova.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="faq">
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            onclick="toggleFAQ(this)">
+                            Do you offer delivery?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Yes. HT Enova can offer delivery across Pakistan.
+                            Connect this section to your actual delivery
+                            provider when launching the store.
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            onclick="toggleFAQ(this)">
+                            Are the products genuine?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            This demo store is designed around genuine
+                            products. When launching, add your actual
+                            supplier and warranty information here.
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            onclick="toggleFAQ(this)">
+                            Can I return a product?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Add your official return policy here, including
+                            eligibility, return windows and warranty rules.
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            onclick="toggleFAQ(this)">
+                            Which payment methods do you accept?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            You can connect this store to your preferred
+                            payment gateway, bank transfer, cash on delivery
+                            or other supported payment methods.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             NEWSLETTER
+             ===================================================== -->
+
+        <section class="container" id="contact">
+
+            <div class="newsletter">
+
+                <h2>
+                    Stay ahead of the
+                    <span class="gradient-text">
+                        tech drop.
+                    </span>
+                </h2>
+
+                <p>
+                    Subscribe for new arrivals, special offers and
+                    technology updates.
+                </p>
+
+                <form
+                    class="newsletter-form"
+                    onsubmit="subscribe(event)">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required>
+
+                    <button class="button button-primary">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>
+                    HT <span class="gradient-text">Enova</span>
+                </h3>
+
+                <p>
+                    Your modern destination for smartphones,
+                    accessories, audio and smart technology.
+                </p>
+
+                <p>
+                    📍 Lahore, Pakistan
+                </p>
+
+                <p>
+                    📞 +92 300 0000000
+                </p>
+
+                <p>
+                    ✉ hello@htenova.com
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Shop</h4>
+
+                <a href="#shop">Mobiles</a>
+                <a href="#shop">Audio</a>
+                <a href="#shop">Chargers</a>
+                <a href="#shop">Wearables</a>
+                <a href="#shop">Accessories</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Customer Care</h4>
+
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Warranty</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Follow HT Enova</h4>
+
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            © 2026 HT Enova. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         SEARCH OVERLAY
+         ========================================================= -->
+
+    <div
+        class="overlay"
+        id="searchOverlay"
+        onclick="closeSearchOutside(event)">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search phones, earbuds, chargers..."
+                oninput="searchProducts(this.value)">
+
+            <div
+                class="search-results"
+                id="searchResults">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         CART SIDEBAR
+         ========================================================= -->
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button
+                class="icon-button"
+                onclick="closeCart()">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems">
+
+            <p style="color:#667085;">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <div class="total-line">
+
+                <span>Total</span>
+
+                <span id="cartTotal">
+                    Rs. 0
+                </span>
+
+            </div>
+
+            <button
+                class="button button-primary"
+                style="width:100%;"
+                onclick="checkout()">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         PRODUCT MODAL
+         ========================================================= -->
+
+    <div
+        class="overlay"
+        id="productOverlay"
+        onclick="closeProductOutside(event)">
+
+        <div class="product-modal">
+
+            <button
+                class="icon-button modal-close"
+                onclick="closeProductModal()">
+                ✕
+            </button>
+
+            <div
+                class="product-modal-grid"
+                id="productModalContent">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script>
+
+        /* =====================================================
+           PRODUCT DATABASE
+           ===================================================== */
+
+        const products = [
+
+            {
+                id: 1,
+                name: "Nova X Pro 5G",
+                type: "Mobile",
+                price: 129999,
+                oldPrice: 149999,
+                rating: 5,
+                reviews: 128,
+                icon: "📱",
+                badge: "NEW",
+                description:
+                    "Premium 5G smartphone with a high-resolution display, powerful performance and advanced camera system."
+            },
+
+            {
+                id: 2,
+                name: "Vision Max 256GB",
+                type: "Mobile",
+                price: 184999,
+                oldPrice: 204999,
+                rating: 5,
+                reviews: 91,
+                icon: "📱",
+                badge: "PRO",
+                description:
+                    "High-performance flagship smartphone with generous storage and a premium design."
+            },
+
+            {
+                id: 3,
+                name: "AirBeat Pro Buds",
+                type: "Audio",
+                price: 8999,
+                oldPrice: 11999,
+                rating: 5,
+                reviews: 240,
+                icon: "🎧",
+                badge: "SALE",
+                description:
+                    "Wireless earbuds with immersive sound, compact design and all-day comfort."
+            },
+
+            {
+                id: 4,
+                name: "BassGo Wireless Headset",
+                type: "Audio",
+                price: 6499,
+                oldPrice: 7999,
+                rating: 4,
+                reviews: 78,
+                icon: "🎧",
+                badge: "HOT",
+                description:
+                    "Comfortable wireless headset designed for music, calls and entertainment."
+            },
+
+            {
+                id: 5,
+                name: "PowerCore 33W Charger",
+                type: "Charger",
+                price: 3499,
+                oldPrice: 4499,
+                rating: 4,
+                reviews: 154,
+                icon: "🔌",
+                badge: "FAST",
+                description:
+                    "Compact fast charger designed for compatible phones and everyday charging."
+            },
+
+            {
+                id: 6,
+                name: "FlexCharge 3-in-1 Cable",
+                type: "Charger",
+                price: 1899,
+                oldPrice: 2499,
+                rating: 5,
+                reviews: 113,
+                icon: "🔋",
+                badge: "VALUE",
+                description:
+                    "Convenient multi-device charging cable for your everyday setup."
+            },
+
+            {
+                id: 7,
+                name: "Pulse S2 Smart Watch",
+                type: "Wearable",
+                price: 12499,
+                oldPrice: 15999,
+                rating: 5,
+                reviews: 187,
+                icon: "⌚",
+                badge: "NEW",
+                description:
+                    "Modern smartwatch with activity tracking, notifications and a stylish display."
+            },
+
+            {
+                id: 8,
+                name: "FitTrack Lite",
+                type: "Wearable",
+                price: 7999,
+                oldPrice: 9999,
+                rating: 4,
+                reviews: 65,
+                icon: "⌚",
+                badge: "SALE",
+                description:
+                    "Lightweight wearable designed for everyday activity tracking."
+            },
+
+            {
+                id: 9,
+                name: "ArmorShield Clear Case",
+                type: "Protection",
+                price: 1499,
+                oldPrice: 1999,
+                rating: 4,
+                reviews: 320,
+                icon: "🛡️",
+                badge: "BEST",
+                description:
+                    "Slim protective phone case with a clear modern design."
+            },
+
+            {
+                id: 10,
+                name: "GlassGuard Pro",
+                type: "Protection",
+                price: 999,
+                oldPrice: 1499,
+                rating: 5,
+                reviews: 270,
+                icon: "🛡️",
+                badge: "TOP",
+                description:
+                    "Screen protection accessory designed to help protect your display."
+            },
+
+            {
+                id: 11,
+                name: "PowerBank Ultra 20K",
+                type: "Charger",
+                price: 5499,
+                oldPrice: 6999,
+                rating: 5,
+                reviews: 89,
+                icon: "🔋",
+                badge: "POWER",
+                description:
+                    "High-capacity portable power bank for charging devices while travelling."
+            },
+
+            {
+                id: 12,
+                name: "SmartTag Mini",
+                type: "Gadget",
+                price: 2999,
+                oldPrice: 3999,
+                rating: 4,
+                reviews: 48,
+                icon: "📍",
+                badge: "SMART",
+                description:
+                    "Compact smart tracking gadget for everyday belongings."
+            }
+
+        ];
+
+
+        /* =====================================================
+           CART / WISHLIST
+           ===================================================== */
+
+        let cart = [];
+
+        let wishlist = [];
+
+
+        /* =====================================================
+           MONEY FORMAT
+           ===================================================== */
+
+        function formatMoney(number) {
+
+            return "Rs. " +
+                number.toLocaleString("en-PK");
+
+        }
+
+
+        /* =====================================================
+           RENDER PRODUCTS
+           ===================================================== */
+
+        function renderProducts(list = products) {
+
+            const grid =
+                document.getElementById("productsGrid");
+
+            grid.innerHTML = "";
+
+            if (list.length === 0) {
+
+                grid.innerHTML = `
+                    <div style="
+                        grid-column:1/-1;
+                        background:white;
+                        padding:40px;
+                        border-radius:20px;
+                        text-align:center;
+                    ">
+                        <h3>No products found</h3>
+                        <p style="color:#667085;">
+                            Try another search or category.
+                        </p>
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            list.forEach(product => {
+
+                const card =
+                    document.createElement("article");
+
+                card.className = "product-card";
+
+
+                const liked =
+                    wishlist.includes(product.id);
+
+
+                let stars = "";
+
+                for (
+                    let i = 0;
+                    i < 5;
+                    i++
+                ) {
+
+                    stars +=

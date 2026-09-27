@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Introduction to HTML DOM</title>
+    </head>
+    <body>
+        <h1 id="heading">Introduction to HTML DOM</h1>
+        <p>Hello, World!</p>
+        <p>This is a simple example of the HTML DOM.</p>
+        <p>Interactive HTML DOM example.</p>
+        <script>
+let div=document.createElement("div");
+div.id="paragraph";
+div.className="alert";
+div.innerHTML="This is a simple example of the HTML DOM.";
+document.body.append(div);
+let heading=document.getElementById("heading");
+heading.innerHTML="Introduction to HTML DOM";
+document.querySelector('header p').innerHTML="<strong>good job!</strong>";
+        </script>
+    </body>
+</html>

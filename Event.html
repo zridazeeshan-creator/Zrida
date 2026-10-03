@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Event</title>
+        <style>
+            body.dark{
+                background-color: black;
+                color: white;
+            }
+            button{
+                background-color: red;
+                color: white;
+                font-size: 20px;
+                padding: 5px;
+            }
+            .textentry{
+                color: white;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>the basement</h1>
+<p id="story">I wanted to find my friend, and he was hiding in the basement.</p>
+<button onclick="godark()">Get in the mood</button>
+<div class="textentry">Type your name here,if you dare!: <input type="text" id="name"> </div>
+<button onclick="typeandscreame()">please, please dont click me!</button>
+<button onclick="finishthestory()">tell me what happened!</button>
+<script>
+    function typeandscreame(){
+        // uncomment to the commented codes for the audio
+        // documet.getElementById("audio").play();
+        var personname=document.getElementById("name").value;
+        alert("I told you not do that, "+personname+"!");
+    }
+    function godark() {
+        
+        document.body.className="dark";
+    }
+    function finishthestory(){
+        document.getElementById("story").innerHTML="so i carefully surched damp dungeon.there you are!";
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Changing CSS properties</title>
+        <style>
+
+            h2{
+                text-align: center;
+            }
+.rectangle {
+    border: 2px solid black;
+    width : 200px;
+    height: 100px;
+    background-color: blue;
+    margin: 0 auto;
+}
+            .buttons{
+                text-align: center;
+                padding: 10px;
+                width:200px;
+                margin:auto;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Make changes to rectangle</h1>
+        <div class="rectangle"></div>
+        <div class="buttons">
+            <button onclick="changeToCircle()">make the rectangle a circle</button>
+             <button onclick="hiderect()">Hide </button>
+              <button onclick="showrect()">Show </button>
+        </div>
+        <script>
+            let div=document.querySelector(".rectangle");
+            function changeToCircle(){
+                div.style.borderRadius="50%";
+            }
+            function hiderect(){
+                div.style.display="none";
+            }
+            function showrect(){
+                div.style.display="block";
+            }
+            div.onmouseenter = function () {
+                div.style.background = "red";
+            };
+            div.onmouseleave = function() {
+                div.style.background = "blue";
+            };
+        </script>
+        </div>
+    </body>
+</html>

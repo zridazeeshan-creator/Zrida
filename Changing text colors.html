@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Changing CSS properties</title>
+        <style>
+
+            h1{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Make changes to colour</h1>
+        <p>When you hover over the heading and paragraph, they will change color.</p>
+         
+        <script>
+            let heading = document.querySelector("h1");
+              let para= document.querySelector("p");
+            heading.onmouseenter = function () {
+                heading.style.color = "red";
+            };
+    para.onmouseenter = function () {
+     para.style.color = "green";
+};
+
+heading.onmouseleave = function () {
+    heading.style.color = "black";
+     para.style.color = "black";
+};
+        </script>
+        </div>
+    </body>
+</html>

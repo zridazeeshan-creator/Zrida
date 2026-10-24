@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Mountain Slides</title>
+    </head>
+    <body>
+        <section>
+            <img class="myslides" src="Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006 (1).jpg" alt="slide 1" style="height:500px;"> 
+             <img class="myslides" src="images (1).jpeg" alt="slide 2" style="height:500px;">
+        <img class="myslides" src="images (20).jpeg" alt="slide 3" style="height:500px;"> 
+             <img class="myslides" src="images.jpeg" alt="slide 4" style="height:500px;">
+         <img class="myslides" src="images (2).jpeg" alt="slide 1" style="height:500px;"> 
+             <img class="myslides" src="images (3).jpeg" alt="slide 2" style="height:500px;">
+        <img class="myslides" src="images (4).jpeg" alt="slide 3" style="height:500px;"> 
+             <img class="myslides" src="images (5).jpeg" alt="slide 4" style="height:500px;">
+        
+        </section>
+        <script>
+            
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("myslides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000); 
+            }
+        </script>
+    </body>
+</html>
